@@ -113,34 +113,44 @@
         </p>
 
         <!-- Form action = a real navigation action to another page -->
-        <form class="form" action="thanks.html" method="get">
-          <div class="form-row">
+        <form class="form" action="https://formspree.io/f/abcdwxyz" method="post">
+        <div class="form-row">
             <label for="name">Your name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
+        </div>
 
-          <div class="form-row">
+        <div class="form-row">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-row">
             <label for="topic">What accessibility topic?</label>
             <select id="topic" name="topic" required>
-              <option value="">Select one</option>
-              <option value="screen-readers">Screen readers</option>
-              <option value="keyboard-navigation">Keyboard navigation</option>
-              <option value="low-vision">Low vision / visual design</option>
-              <option value="other">Other</option>
+            <option value="">Select one</option>
+            <option value="screen-readers">Screen readers</option>
+            <option value="keyboard-navigation">Keyboard navigation</option>
+            <option value="low-vision">Low vision / visual design</option>
+            <option value="other">Other</option>
             </select>
-          </div>
+        </div>
 
-          <div class="form-row">
+        <div class="form-row">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
+        </div>
+        <input type="hidden" name="_next" value="https://YOUR-VERCEL-URL.vercel.app/thanks.html" />
 
-          <button type="submit">Submit</button>
+        <!-- Helps reduce spam and makes the email nicer -->
+        <input type="hidden" name="_subject" value="Accessible Computing Bio: New message" />
+
+        <button type="submit">Send</button>
         </form>
 
         <p class="fineprint">
-          You’ll be taken to a “Thanks” page after you submit.
+        This sends a message to me through Formspree. You’ll see a confirmation after you hit send.
         </p>
+
       </section>
     </main>
 
