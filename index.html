@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landon Tong | Accessible Computing Bio</title>
+    <meta
+      name="description"
+      content="Web Page Bio for Accessible Computing: interests, accessibility focus, and ways to connect."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div>
+          <h1>Landon Tong</h1>
+          <p class="tagline">
+            Computer Engineering @ Texas A&amp;M • Interested in <strong>accessible</strong> and
+            <em>inclusive</em> tech
+          </p>
+        </div>
+
+        <!-- Decorative image (contains no meaningful content) -->
+        <img
+          class="decorative"
+          src="images/icon-wave.svg"
+          alt=""
+          aria-hidden="true"
+          width="44"
+          height="44"
+        />
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section aria-labelledby="about-heading" class="card">
+        <h2 id="about-heading">About me</h2>
+
+        <div class="grid">
+          <figure class="profile">
+            <!-- Non-decorative (meaningful) image -->
+            <img
+              src="images/landon.jpg"
+              alt="Photo of Landon Tong smiling, facing the camera."
+              width="360"
+              height="360"
+            />
+            <figcaption>Hi! I’m Landon. If you see me in class, say hello.</figcaption>
+          </figure>
+
+          <div>
+            <p>
+              I’m a Computer Engineering student at Texas A&amp;M. I like building systems that are
+              easy to use and reliable. This semester I want to focus on how accessibility fits
+              into the design process early—before it becomes a last-minute fix.
+            </p>
+
+            <p>
+              I’m especially interested in accessibility for people who use assistive technology,
+              and in designing interfaces that work well with keyboards, screen readers, and
+              different visual needs.
+            </p>
+
+            <h3>What I’m hoping to learn</h3>
+            <ul>
+              <li>How to design for screen reader + keyboard users from the start</li>
+              <li>How to evaluate accessibility and communicate issues clearly</li>
+            </ul>
+
+            <p class="links">
+              <a href="bio-links.html">Go to the Web Page Bio Links page</a>
+              <span aria-hidden="true">•</span>
+              <a href="#contact">Contact form</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="accessibility-heading" class="card">
+        <h2 id="accessibility-heading">Accessibility interests</h2>
+
+        <h3>Topics I’m excited about</h3>
+        <ol>
+          <li>
+            Accessible UI patterns (focus states, error messages, form labels, and navigation)
+          </li>
+          <li>Inclusive data visualization (color + text alternatives)</li>
+          <li>Testing: keyboard-only flows and screen reader sanity checks</li>
+        </ol>
+
+        <h3>Potential team project directions</h3>
+        <p>
+          I’d love to work on a project that improves usability for people with low vision, mobility
+          limitations, or people who rely on keyboard navigation. If you’re interested in building
+          something like an accessible study tool or accessibility checker, let’s team up.
+        </p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading" class="card">
+        <h2 id="contact-heading">Connect with me</h2>
+        <p>
+          Use this form to email me. It’s a simple “mailto” action (no scripting required), and it
+          still counts as a form that initiates an action.
+        </p>
+
+        <form
+          class="form"
+          action="mailto:landon@example.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-row">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="topic">Accessibility topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Select one</option>
+              <option value="screen-readers">Screen readers</option>
+              <option value="keyboard-navigation">Keyboard navigation</option>
+              <option value="visual-design">Low vision / visual design</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Email Landon</button>
+        </form>
+
+        <p class="fineprint">
+          Note: this opens your default email app with the form content.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <small>
+            Built for Accessible Computing •
+            <a href="bio-links.html">Class Bio Links</a>
+          </small>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
