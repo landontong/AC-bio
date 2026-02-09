@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web Page Bio Links</title>
+    <meta name="description" content="Links to classmates’ web page bios." />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -11,23 +12,33 @@
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header">
-      <div class="container">
-        <h1>Web Page Bio Links</h1>
-        <p class="tagline">
-          Links to classmates’ web page bios, listed alphabetically by first name.
-        </p>
+      <div class="container header-inner">
+        <div>
+          <h1>Web Page Bio Links</h1>
+          <p class="tagline">
+            Links to classmates’ bio pages, listed alphabetically by first name.
+          </p>
+        </div>
+
+        <!-- Decorative image -->
+        <img
+          class="decorative"
+          src="images/tamu.png"
+          alt=""
+          aria-hidden="true"
+          width="56"
+          height="56"
+        />
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="card">
-        <h2>Class links</h2>
+      <section class="card" aria-labelledby="links-heading">
+        <h2 id="links-heading">Class links</h2>
 
         <ul>
           <!-- Alphabetical by FIRST name -->
-          <li>
-            <a href="index.html">Landon Tong</a>
-          </li>
+          <li><a href="index.html">Landon Tong</a></li>
         </ul>
 
         <p class="links">

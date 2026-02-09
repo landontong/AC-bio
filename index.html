@@ -108,24 +108,15 @@
       <section id="contact" aria-labelledby="contact-heading" class="card">
         <h2 id="contact-heading">Connect with me</h2>
         <p>
-          This form uses a “mailto” action, so it’ll open your email app and pre-fill the message.
-          It’s basic, but it works without needing JavaScript.
+          This form doesn’t send me an email (no backend), but it does submit to a confirmation page.
+          It’s mainly here so classmates can share what accessibility topics they’re interested in.
         </p>
 
-        <form
-          class="form"
-          action="mailto:landon@example.com"
-          method="post"
-          enctype="text/plain"
-        >
+        <!-- Form action = a real navigation action to another page -->
+        <form class="form" action="thanks.html" method="get">
           <div class="form-row">
             <label for="name">Your name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-
-          <div class="form-row">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
 
           <div class="form-row">
@@ -144,11 +135,11 @@
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
 
-          <button type="submit">Email me</button>
+          <button type="submit">Submit</button>
         </form>
 
         <p class="fineprint">
-          (If nothing happens when you submit, you may not have a default email app set up.)
+          You’ll be taken to a “Thanks” page after you submit.
         </p>
       </section>
     </main>
